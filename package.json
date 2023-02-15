@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "epress": "^0.0.1-security",
+    "mongoose": "^6.9.1"
+  }
+}
