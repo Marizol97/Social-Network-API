@@ -61,3 +61,5 @@ module.exports = Thought;
 function dateFormat(timestamp) {
   return new Date(timestamp).toLocaleDateString();
 }
+
+module.exports = Thought;
