@@ -18,12 +18,12 @@ http://localhost:
 
 <a name = "technologies"></a>
 ## Technologies
-JavaScript
-HTML/CSS
-IndexedDB
-idb 
-Webpack
-Workbox
-Express.js
+JavaScript,
+HTML/CSS,
+IndexedDB,
+idb,
+Webpack,
+Workbox,
+Express.js,
 Heroku
 
