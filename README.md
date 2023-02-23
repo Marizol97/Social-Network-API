@@ -12,8 +12,8 @@ saving documents to local storage and IndexedDB.
 
 <a name = "installation"></a>
 ## Installation
-npm install
-npm run start
+follow in this order npm install,
+npm run start,
 http://localhost:
 
 <a name = "technologies"></a>
