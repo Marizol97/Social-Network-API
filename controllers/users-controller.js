@@ -1,7 +1,8 @@
-const { User } = require('../../models');
+const { User } = require('../models');
 
 const userController = {
   getAllUsers(req, res) {
+    console.log('get all users fired')
     User.find({})
       .populate({
         path: 'thoughts',
@@ -17,6 +18,25 @@ const userController = {
       .catch(err => {
         console.log(err);
         res.status(400).json(err);
+      });
+  },
+  
+  deleteUser(req, res) {
+    User.findOneAndDelete({ _id: req.params.userId })
+      .then((dbUserData) => {
+        if (!dbUserData) {
+          return res.status(404).json({ message: 'No user with this id!' });
+        }
+
+        // BONUS: get ids of user's thoughts and delete them all
+        return Thought.deleteMany({ _id: { $in: dbUserData.thoughts } });
+      })
+      .then(() => {
+        res.json({ message: 'User and associated thoughts deleted!' });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
       });
   },
 

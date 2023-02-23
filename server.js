@@ -12,16 +12,17 @@ app.use(routes);
 app.use(express.static('public'));
 
 // Set up database connection
-mongoose.connect('mongodb://localhost/social-network', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false
-});
+// mongoose.connect('mongodb://localhost/social-network', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useFindAndModify: false,
+// });
+
+// mongoose.set('strictQuery', true)
 
 // Define API routes
-app.use('/api/users', require('./routes/user-routes'));
-app.use('/api/thoughts', require('./routes/thought-routes'));
-app.use('/api/reactions', require('./routes/reaction-routes'));
+app.use('/api/users', require('./routes/api/user-routes'));
+app.use('/api/thoughts', require('./routes/api/thought-routes'));
 
 db.once('open', ()=> {
   app.listen(PORT, () => {
