@@ -12,7 +12,7 @@ saving documents to local storage and IndexedDB.
 
 <a name = "installation"></a>
 ## Installation
-follow in this order npm install,
+Follow in this order npm install,
 npm run start,
 http://localhost:
 
