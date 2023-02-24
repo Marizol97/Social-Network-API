@@ -7,8 +7,7 @@
 
 <a name = "description"></a>
 ## Description
-This text editor PWA demonstrates the use of data persistence techniques, offline functionality, and the creation of installable PWAs.The text editor PWA includes the following functionality: Creating, editing, and deleting documents. As well as
-saving documents to local storage and IndexedDB.
+Involves building an API for a social network web application that allows users to share their thoughts, react to friends' thoughts, and create a friend list. MongoDB is used for its speed with large amounts of data and flexibility with unstructured data
 
 <a name = "installation"></a>
 ## Installation
@@ -18,12 +17,10 @@ http://localhost:
 
 <a name = "technologies"></a>
 ## Technologies
-JavaScript,
-HTML/CSS,
-IndexedDB,
-idb,
-Webpack,
-Workbox,
-Express.js,
-Heroku
+MongoDB,
+Mongoose ODM,
+express,
+html,
+css,
+javascript
 
