@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-const reactionSchema = new mongoose.Schema({
+const reactionSchema = new Schema({
   reactionId: {
-    type: mongoose.Schema.Types.ObjectId,
-    default: () => new mongoose.Types.ObjectId()
+    type: Schema.Types.ObjectId,
+    default: () => new Types.ObjectId()
   },
   reactionBody: {
     type: String,
@@ -25,10 +25,10 @@ const reactionSchema = new mongoose.Schema({
   }
 });
 
-const thoughtSchema = new mongoose.Schema({
+const thoughtSchema = new Schema({
   thoughtText: {
     type: String,
-    required: true,
+    required: 'You need to leave a thought!',
     minlength: 1,
     maxlength: 280
   },
@@ -54,9 +54,7 @@ thoughtSchema.virtual('reactionCount').get(function() {
   return this.reactions.length;
 });
 
-const Thought = mongoose.model('Thought', thoughtSchema);
-
-module.exports = Thought;
+const Thought = model('Thought', thoughtSchema);
 
 function dateFormat(timestamp) {
   return new Date(timestamp).toLocaleDateString();
